@@ -6,6 +6,12 @@ This AWS CDK Construct creates a digest version of an existing SNS topic. The di
 
 I had a project where I created a small ETL process to parse Excel files upon upload to S3. Upon completion of the parsing, a notification was sent to an SNS topic with e-mail subscriptions. These uploads could either happen sporatically or as a bulk process. The bulk processes tended to overrun the e-mail endpoints with hundreds of notifications, and the original suggestion was to unsubscribe prior to the bulk submissions and resubscribe after. I created this digest process so that bulk notifications do not overrun e-mail endpoints.
 
+## Installation
+
+```
+npm i @rogerchi/cdk-sns-digest
+```
+
 ## Example Usage
 
 ### Use default aggregation Lambda function
