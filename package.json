@@ -1,0 +1,47 @@
+{
+  "name": "@rogerchi/cdk-sns-digest",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "types": "lib/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@types/node": "10.17.5",
+    "@types/node-fetch": "^2.5.7",
+    "@types/papaparse": "^5.0.4",
+    "typescript": "~3.7.2"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.0",
+    "papaparse": "^5.2.0",
+    "source-map-support": "^0.5.16"
+  },
+  "peerDependencies": {
+    "@aws-cdk/aws-events": "^1.47.0",
+    "@aws-cdk/aws-events-targets": "^1.47.0",
+    "@aws-cdk/aws-lambda": "^1.47.0",
+    "@aws-cdk/aws-s3": "^1.47.0",
+    "@aws-cdk/aws-sns": "^1.47.0",
+    "@aws-cdk/aws-sns-subscriptions": "^1.47.0",
+    "@aws-cdk/aws-sqs": "^1.47.0",
+    "@aws-cdk/core": "^1.47.0"
+  },
+  "description": "This AWS CDK Construct creates a digest version of an existing SNS topic. The digest infrastructure aggregates noficiations from an SNS topic over a period of time (using an intermediary SQS queue and a scheduled Lambda function) into .csv or .json format, stores it in a new S3 bucket, and sends notifications to the digest SNS topic with a presigned link to download the aggregate file.",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rogerchi/cdk-sns-digest.git"
+  },
+  "keywords": [
+    "cdk"
+  ],
+  "author": "Roger Chi",
+  "bugs": {
+    "url": "https://github.com/rogerchi/cdk-sns-digest/issues"
+  },
+  "homepage": "https://github.com/rogerchi/cdk-sns-digest#readme"
+}
