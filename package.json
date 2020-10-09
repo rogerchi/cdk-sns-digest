@@ -1,6 +1,6 @@
 {
   "name": "@rogerchi/cdk-sns-digest",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "main": "lib/index.js",
   "license": "MIT",
   "types": "lib/index.d.ts",
@@ -14,14 +14,6 @@
     "typescript": "~3.7.2"
   },
   "dependencies": {
-    "@aws-cdk/aws-events": "^1.60.0",
-    "@aws-cdk/aws-events-targets": "^1.60.0",
-    "@aws-cdk/aws-lambda": "^1.60.0",
-    "@aws-cdk/aws-s3": "^1.60.0",
-    "@aws-cdk/aws-sns": "^1.60.0",
-    "@aws-cdk/aws-sns-subscriptions": "^1.60.0",
-    "@aws-cdk/aws-sqs": "^1.60.0",
-    "@aws-cdk/core": "^1.60.0",
     "node-fetch": "^2.6.0",
     "papaparse": "^5.2.0",
     "source-map-support": "^0.5.16"
