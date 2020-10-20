@@ -85,3 +85,19 @@ def lambda_handler(event, context):
                 publish_to_sns(presign)
             except Exception as e:
                 print(e)
+        if output_format == 'html':
+            df.to_csv("/tmp/{}.html".format(filename), index=False)
+            try:
+                s3.upload_file("/tmp/{}.html".format(filename),
+                               '{}'.format(digest_bucket),
+                               '{}.html'.format(filename))
+                presign = s3.generate_presigned_url(
+                    'get_object',
+                    Params={
+                        'Bucket': digest_bucket,
+                        'Key': '{}.html'.format(filename)
+                    },
+                    ExpiresIn=604800)
+                publish_to_sns(presign)
+            except Exception as e:
+                print(e)
