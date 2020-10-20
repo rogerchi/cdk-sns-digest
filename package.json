@@ -1,6 +1,6 @@
 {
   "name": "@rogerchi/cdk-sns-digest",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "main": "lib/index.js",
   "license": "MIT",
   "types": "lib/index.d.ts",

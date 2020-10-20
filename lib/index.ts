@@ -13,6 +13,7 @@ import fetch from "node-fetch";
 export enum SnsDigestFormat {
   JSON = "json",
   CSV = "csv",
+  HTML = "html",
 }
 
 interface createSnsDigestProps {
